@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RadioOption } from 'app/shared/radio/radio-option.model';
+import { OrderService } from './order.service';
 
 @Component({
   selector: 'mt-order',
@@ -13,7 +14,7 @@ export class OrderComponent implements OnInit {
     {label: 'Cartão Refeição', value: 'REF'}
   ]
 
-  constructor() { }
+  constructor(private orderService: OrderService) { }
 
   ngOnInit() {
   }
